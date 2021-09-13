@@ -1,0 +1,17 @@
+C:\Deloim\PruebaTecnicaDeloim\PruebaTecnicaDeloimBackend\PruebaTecnicaDeloimBackend.Domain\bin\Debug\net5.0\PruebaTecnicaDeloimBackend.Domain.deps.json
+C:\Deloim\PruebaTecnicaDeloim\PruebaTecnicaDeloimBackend\PruebaTecnicaDeloimBackend.Domain\bin\Debug\net5.0\PruebaTecnicaDeloimBackend.Domain.dll
+C:\Deloim\PruebaTecnicaDeloim\PruebaTecnicaDeloimBackend\PruebaTecnicaDeloimBackend.Domain\bin\Debug\net5.0\ref\PruebaTecnicaDeloimBackend.Domain.dll
+C:\Deloim\PruebaTecnicaDeloim\PruebaTecnicaDeloimBackend\PruebaTecnicaDeloimBackend.Domain\bin\Debug\net5.0\PruebaTecnicaDeloimBackend.Domain.pdb
+C:\Deloim\PruebaTecnicaDeloim\PruebaTecnicaDeloimBackend\PruebaTecnicaDeloimBackend.Domain\bin\Debug\net5.0\PruebaTecnicaDeloimBackend.Common.dll
+C:\Deloim\PruebaTecnicaDeloim\PruebaTecnicaDeloimBackend\PruebaTecnicaDeloimBackend.Domain\bin\Debug\net5.0\PruebaTecnicaDeloimBackend.Infraestructure.dll
+C:\Deloim\PruebaTecnicaDeloim\PruebaTecnicaDeloimBackend\PruebaTecnicaDeloimBackend.Domain\bin\Debug\net5.0\PruebaTecnicaDeloimBackend.Common.pdb
+C:\Deloim\PruebaTecnicaDeloim\PruebaTecnicaDeloimBackend\PruebaTecnicaDeloimBackend.Domain\bin\Debug\net5.0\PruebaTecnicaDeloimBackend.Infraestructure.pdb
+C:\Deloim\PruebaTecnicaDeloim\PruebaTecnicaDeloimBackend\PruebaTecnicaDeloimBackend.Domain\obj\Debug\net5.0\PruebaTecnicaDeloimBackend.Domain.csproj.AssemblyReference.cache
+C:\Deloim\PruebaTecnicaDeloim\PruebaTecnicaDeloimBackend\PruebaTecnicaDeloimBackend.Domain\obj\Debug\net5.0\PruebaTecnicaDeloimBackend.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Deloim\PruebaTecnicaDeloim\PruebaTecnicaDeloimBackend\PruebaTecnicaDeloimBackend.Domain\obj\Debug\net5.0\PruebaTecnicaDeloimBackend.Domain.AssemblyInfoInputs.cache
+C:\Deloim\PruebaTecnicaDeloim\PruebaTecnicaDeloimBackend\PruebaTecnicaDeloimBackend.Domain\obj\Debug\net5.0\PruebaTecnicaDeloimBackend.Domain.AssemblyInfo.cs
+C:\Deloim\PruebaTecnicaDeloim\PruebaTecnicaDeloimBackend\PruebaTecnicaDeloimBackend.Domain\obj\Debug\net5.0\PruebaTecnicaDeloimBackend.Domain.csproj.CoreCompileInputs.cache
+C:\Deloim\PruebaTecnicaDeloim\PruebaTecnicaDeloimBackend\PruebaTecnicaDeloimBackend.Domain\obj\Debug\net5.0\PruebaTecnicaDeloimBackend.Domain.csproj.CopyComplete
+C:\Deloim\PruebaTecnicaDeloim\PruebaTecnicaDeloimBackend\PruebaTecnicaDeloimBackend.Domain\obj\Debug\net5.0\PruebaTecnicaDeloimBackend.Domain.dll
+C:\Deloim\PruebaTecnicaDeloim\PruebaTecnicaDeloimBackend\PruebaTecnicaDeloimBackend.Domain\obj\Debug\net5.0\ref\PruebaTecnicaDeloimBackend.Domain.dll
+C:\Deloim\PruebaTecnicaDeloim\PruebaTecnicaDeloimBackend\PruebaTecnicaDeloimBackend.Domain\obj\Debug\net5.0\PruebaTecnicaDeloimBackend.Domain.pdb
