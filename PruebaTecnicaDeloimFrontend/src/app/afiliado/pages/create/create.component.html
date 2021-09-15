@@ -1,0 +1,62 @@
+<h2>Crear Afiliado</h2>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <form autocomplete="off">
+      <label>Nombre Afiliado</label>
+      <input type="text"
+                  name="AfiliadoNombre"
+                  [(ngModel)]="afiliadoNombre"
+                  class="form-control"
+                  placeholder="Nombre Afiliado" />
+
+      <label>Fecha Nacimiento</label>
+      <input type="date"
+                  name="FechaNacimiento"
+                  [(ngModel)]="fechaNacimiento"
+                  class="form-control" />
+
+      <label>Lugar Nacimiento</label>
+      <input type="text"
+                  name="LugarNacimiento"
+                  [(ngModel)]="lugarNacimiento"
+                  class="form-control"
+                  placeholder="Lugar Nacimiento" />
+
+      <label>Peso</label>
+      <input type="number"
+                  name="Peso"
+                  [(ngModel)]="peso"
+                  class="form-control"
+                  placeholder="Peso" />
+
+      <label >Cargar Foto</label>
+      <br>
+      <input type="file"
+                  alife-file-to-base64 (onFileChanged)="onFileChanges($event)"
+                  [(fileModel)]="files"
+                  [(rawFileModel)]="rawFiles" />
+        <br>
+        <br>
+        <button type="button" class="btn btn-primary" (click)="guardar()">Guardar</button>
+    </form>
+  </div>
+  <div class="col">
+    <label>Imagen Cargada</label>
+    <br>
+    <img class="large-picture" src="{{fotoBase64}}"/>
+  </div>
+</div>
+
+<hr>
+
+<div *ngIf="guardadoExitoso"
+        class="alert alert-success" role="alert">
+         ¡Transacción exitosa!
+</div>
+
+<div *ngIf="guardadoError"
+        class="alert alert-alert" role="alert">
+         ¡Error en transacción!
+</div>

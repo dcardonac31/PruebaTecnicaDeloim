@@ -1,0 +1,91 @@
+<h2>Editar Afiliado</h2>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <form  autocomplete="off">
+      <label>Id Afiliado</label>
+      <input type="number"
+      name="AfiliadoID"
+      [(ngModel)] = "afiliadoId"
+      class="form-control"
+      placeholder="Id Afiliado" />
+
+      <br>
+      <button type="button" class="btn btn-primary" (click)="buscar()">Buscar</button>
+      <br>
+      <br>
+
+      <div *ngIf="errorBusqueda"
+                class="alert alert-danger">
+            Criterio de busqueda no encontrado
+      </div>
+
+
+      <label>NombreAfiliado</label>
+       <input type="text"
+                  name="AfiliadoNombre"
+                  class="form-control"
+                  [(ngModel)]="afiliadoData.afiliadoNombre"
+                  placeholder="Nombre Afiliado" />
+
+      <label>Fecha Nacimiento</label>
+      <input type="date"
+                  name="FechaNacimiento"
+                  class="form-control"
+                  [ngModel]="afiliadoData.fechaNacimiento | date:'yyyy-MM-dd'"
+                  (ngModelChange)="afiliadoData.fechaNacimiento = $event" />
+
+      <label>Lugar Nacimiento</label>
+      <input type="text"
+                  name="LugarNacimiento"
+                  [(ngModel)]="afiliadoData.lugarNacimiento"
+                  class="form-control"
+                  placeholder="Lugar Nacimiento" />
+
+        <label>Peso</label>
+        <input type="number"
+                    name="Peso"
+                    [(ngModel)]="afiliadoData.peso"
+                    class="form-control"
+                    placeholder="Peso" />
+
+      <label >Cargar Foto</label>
+      <br>
+      <input type="file"
+                  alife-file-to-base64 (onFileChanged)="onFileChanged($event)"
+                  [(fileModel)]="files"
+                  [(rawFileModel)]="rawFiles" />
+
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col">
+              <button type="button" class="btn btn-primary" (click)="editar()">Editar</button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-danger" (click)="eliminar()">Eliminar</button>
+            </div>
+        </div>
+
+    </form>
+  </div>
+  <div class="col">
+    <label>Imagen Cargada</label>
+    <br>
+    <img class="large-picture" src="{{fotoBase64}}"/>
+  </div>
+</div>
+
+<hr>
+
+<div *ngIf="guardadoExitoso"
+        class="alert alert-success" role="alert">
+         ¡Transacción exitosa!
+</div>
+
+<div *ngIf="guardadoError"
+        class="alert alert-alert" role="alert">
+         ¡Error en transacción!
+</div>

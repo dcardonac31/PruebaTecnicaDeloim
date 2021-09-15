@@ -1,7 +1,7 @@
 USE [BDAfiliado]
 GO
 
-/****** Object:  StoredProcedure [dbo].[SP_GetListAfiliado]    Script Date: 13/09/2021 3:12:35 p. m. ******/
+/****** Object:  StoredProcedure [dbo].[SP_GetListAfiliado]    Script Date: 14/09/2021 2:08:33 a. m. ******/
 SET ANSI_NULLS ON
 GO
 
@@ -59,7 +59,6 @@ BEGIN
         Af.Peso
     FROM
     	Afiliado Af
+    WHERE YEAR(Af.FechaNacimiento) = @Year AND Af.LugarNacimiento = @City
 END
 GO
-
-

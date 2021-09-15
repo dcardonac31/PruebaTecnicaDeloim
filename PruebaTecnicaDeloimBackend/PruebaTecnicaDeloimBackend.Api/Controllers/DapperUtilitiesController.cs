@@ -40,6 +40,8 @@ namespace PruebaTecnicaDeloimBackend.Api.Controllers
             _logger.LogInformation(nameof(GetListAfiliado));
 
             var result = await _service.GetListAfiliado(city, year);
+            if (result.Count() == 0)
+                return NotFound();
             var resultDto = result as AfiliadoDto[] ?? result.ToArray();
             var response = new ResponseService<IEnumerable<AfiliadoDto>>
             {

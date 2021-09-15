@@ -34,7 +34,7 @@ namespace PruebaTecnicaDeloimBackend.Api.Controllers
 
         [HttpGet("{id}")]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        [ProducesResponseType(typeof(ResponseService<AfiliadoDto>), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(AfiliadoDto), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> GetByIdAsync(int id)
         {
             _logger.LogInformation(nameof(GetByIdAsync));
@@ -45,15 +45,14 @@ namespace PruebaTecnicaDeloimBackend.Api.Controllers
             }
 
             var result = await _service.GetByIdAsync(id).ConfigureAwait(false);
+
+            if (result is null)
+                return NotFound();
+
             result.FotoBase64 = Encoding.UTF8.GetString(result.Foto);
-            var existResult = result != null;
-            var response = new ResponseService<AfiliadoDto>
-            {
-                Status = existResult,
-                Message = existResult ? GenericEnumerator.Status.Ok.ToStringAttribute() : GenericEnumerator.Status.Error.ToStringAttribute(),
-                Data = result
-            };
-            return Ok(response);
+
+
+            return Ok(result);
         }
 
         [HttpGet("{page:int}/{limit:int}")]
@@ -63,6 +62,9 @@ namespace PruebaTecnicaDeloimBackend.Api.Controllers
             _logger.LogInformation(nameof(GetAllAsync));
 
             var result = await _service.GetAllAsync(page ?? 1, limit ?? 1000, "AfiliadoID").ConfigureAwait(false);
+
+            if (result.Count() == 0)
+                return NotFound();
 
             foreach (var item in result)
             {

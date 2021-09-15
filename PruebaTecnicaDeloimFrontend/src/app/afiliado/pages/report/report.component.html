@@ -1,0 +1,14 @@
+<h2>Reporte Afiliado</h2>
+<hr>
+
+<div *ngIf="hayError"
+        class="alert alert-danger">
+  No hay datos para mostrar
+</div>
+
+<hr>
+<div *ngIf="!hayError" class="row">
+  <div class="col">
+    <app-afiliado-table [afiliados] = "afiliados"></app-afiliado-table>
+  </div>
+</div>

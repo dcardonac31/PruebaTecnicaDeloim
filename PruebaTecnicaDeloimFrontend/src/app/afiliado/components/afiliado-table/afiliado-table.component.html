@@ -1,0 +1,24 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">AfiliadoID</th>
+      <th scope="col">AfiliadoNombre</th>
+      <th scope="col">FechaNacimiento</th>
+      <th scope="col">LugarNacimiento</th>
+      <th scope="col">Foto</th>
+      <th scope="col">Peso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr scope="row" *ngFor="let afiliado of afiliados; let i = index">
+      <td>{{ afiliado.afiliadoID}}</td>
+      <td>{{ afiliado.afiliadoNombre}}</td>
+      <td>{{ afiliado.fechaNacimiento | date: 'yyyy-MM-dd' }}</td>
+      <td>{{ afiliado.lugarNacimiento }}</td>
+      <td>
+        <img class="small-picture" [src]="afiliado.fotoBase64">
+      </td>
+      <td>{{ afiliado.peso }}</td>
+    </tr>
+  </tbody>
+</table>

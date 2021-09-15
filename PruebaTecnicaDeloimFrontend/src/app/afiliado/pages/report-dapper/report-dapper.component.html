@@ -1,0 +1,44 @@
+<h2>Reporte (Dapper) Afiliado</h2>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <form autocomplete="off">
+      <label>Año Nacimiento</label>
+      <input type="number"
+                  name="anioNacimiento"
+                  class="form-control"
+                  [(ngModel)]="anioNacimiento"
+                  placeholder="Año Nacimiento"/>
+
+      <label>Lugar Nacimiento</label>
+      <input type="text"
+                  name="lugarNacimiento"
+                  class="form-control"
+                  [(ngModel)]="lugarNacimiento"
+                  placeholder="Lugar Nacimiento" />
+
+          <br>
+
+          <button type="button"
+                        class="btn btn-primary"
+                        id="btnBuscar"
+                        (click) = "buscar()"
+                        >Buscar</button>
+    </form>
+  </div>
+</div>
+
+<br>
+
+<div *ngIf="errorBusqueda"
+        class="alert alert-danger">
+  Criterio de busqueda no encontrado
+</div>
+
+<hr>
+<div *ngIf="!errorBusqueda" class="row">
+  <div class="col">
+    <app-afiliado-table [afiliados] = "afiliados"></app-afiliado-table>
+  </div>
+</div>
